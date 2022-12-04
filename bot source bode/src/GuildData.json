@@ -1,0 +1,8 @@
+{
+  "guildID": {
+    "prefix": "sv_prefix",
+    "admin": [],
+    "moderator": [],
+    "adminstrator": []
+  }
+}

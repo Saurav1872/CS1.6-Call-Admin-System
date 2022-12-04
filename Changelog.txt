@@ -1,0 +1,31 @@
+Discord Core API And Call Admin Plugin is updated.
+The plugin is more advanced, optimised, user and staff friendly.
+
+Let's make a quick summary.
+
+
+
+Discord Core API - Version 3.5
+=> CallBack added to trigger message sent event. 
+	forward Discord_MessageSent_Post(MsgHandle, const messageID[], const data[]);
+=> Link Button feature added, the latest discord api feature.
+	native Discord_AddLinkButton(const title[], const url[]);
+=> Removed Unwanted part from codes.
+=> Add new bottoken[] = "Bot Token";  inside code to manage bot token and maintain the safety.
+=> Some minor optimization.
+
+
+Call Admin Plugin - 3.3
+=> Call Admin Embed Format Optimized.
+=> Added Link Button for Connect.
+=> Added Menu For Admin to close active ingame reports.
+=> Added Report Status Images in emded (ex: Report Accepted etc ).
+=> Added Message successfully sent message for user who make report.
+=> Added auto inform ingame admins when a report is made(admin with flag to manage calladmin reports).
+=> Added recheck if message was sent so that player wont need to wait another 5 min to make another same report.
+=> Added Auto Inform User If report wasnt sent successfully.
+=> Added cvar calladmin_server_ip incase if serverip needed to be customized.
+=> Added cvar calladmin_announce to enable/disable announcement message on every round ( after 20 sec of each round start ).
+=> Added cvar calladmin_warnings to enable/disable warning messages whenever a /calladmin is made.
+=> Added Multilingual Support for the plugin.
+=> Some minor optimization.

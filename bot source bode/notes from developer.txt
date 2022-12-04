@@ -1,0 +1,25 @@
+Extra info from developers desk ( only howler sitting atm xD )
+
+1. Bot uses these permission 
+	`Send messages, read messages, read messages history, embed links, manage messages, use extral emojies, add reaction, and use slash commands`
+	
+	But, if bot is hosted by someone trusted, or by owner, its better to give it administrator permission.
+	
+2. Bot commands can be used only by guild (discord sv) administrator and the one who have roles from differents bot positions.
+	These positions are:
+	=> Admin
+	=> Moderator
+	=> Administrator
+	
+	Check add, remove and get commands info to get more info related to managing these positions.
+
+3. To get bot prefix, mention the bot in the chat, like this @botname .
+4. If the bot is added for the first time, use >setup command to setup the bot.
+5. The default bot prefix is `>` , if any command didnot works even if you bares the rank, check the bot prefix by mentioning the bot via @botname
+6. The bot runs on nodejs server, these node packages are required before running the bot:
+		"discord.js": "^13.0.1",
+		"dotenv": "^10.0.0",
+		"ms": "^2.1.3"
+7. The bot needs identify, applications.commands and bot scopes to run. Make sure the bot haves it or it may crash.
+8. If any commands related to calladmin ( ex: close, open, resetreport , changestatus etc ) , then use command `>fakereport` to create a fakereport and use those commands on this fake report. This will make it easy to trace if the issue is server side or the bot side.
+9. Make sure the bot have access to the channel where the report is sent. Else, it will give an error.

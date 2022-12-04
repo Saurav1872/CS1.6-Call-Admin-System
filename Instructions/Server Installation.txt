@@ -1,0 +1,53 @@
+CallAdmin System - Instruction file.
+
+
+	Plugin information & requirements:
+
+		General Info:
+
+			[discord_curl.sma]
+			Plugin Name: [Discord] Core
+			Author: NIGHT HOWLER
+			Version: 3.5
+
+			[calladmin.sma]
+			Plugin Name: Call Admin ( Discord )
+			Author: NIGHT HOWLER
+			Version: 3.3
+
+		Requirements:
+
+			1) AMXX 1.9 or the latest build of 1.8.3 are supported.
+			2) Json Module (Present it AMXX 1.9 but make sure its running).
+			3) AmxxCurl module. (https://github.com/Polarhigh/AmxxCurl).	// It will also be provided in the ZIP file.
+			4) Discord bot. (Read installation instructions below).
+
+
+
+	Installation Instructions:
+
+		Server Side:
+
+			1) Copy the bot token and paste it on line 12 of the file named 'discord_curl.sma'. ( new bottoken[] = "Bot Token"; )
+			2) Open the file 'configs/discord.cfg' and edit the calladmin webhook and put the link of the channel you want to send CallAdmin reports to.
+				Example: https://discordapp.com/api/v9/channels/<channel_id>/messages	// Replace the channel ID with the channel ID you want.
+			3) Compile the plugins and upload them to your server.
+			4) Edit configs/calladmin/reasons.ini . 
+			5) Make sure curl module is running if incase something went wrong.
+
+
+
+	Cvars Information:
+
+		Cvars & Information: ( Default values are provided )
+
+			1) calladmin_cooldown_min	5	// After how many minutes can a player send another calladmin request? (default 5).
+			2) calladmin_server_admin_roleid "0"	// What "role - in id" in Discord would you like to mention in each report? (default 0). 0 - disabled and no roles will be mentioned.
+			3) calladmin_server_ip	"0"		// Server IP (use "0" to use the default method to get server ip address, set to anything else to use custom values ​​like "csdust2only.ugc.lt:27015").
+			4) calladmin_announce	1		// Announce the calladmin on each round. 0 to disable it.
+			5) calladmin_warnings	1		// Show warning messages to the player when he types /calladmin.
+
+		Chat Commands:
+
+			1) /calladmin	// A command for registered players that is used to send 'CallAdmin' requests.
+			2) /reports	// A staff command to see and close pending reports.

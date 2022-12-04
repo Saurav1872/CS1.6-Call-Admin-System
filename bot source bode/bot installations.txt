@@ -1,0 +1,11 @@
+1: Open dev portal (https://discord.com/developers/applications)
+2: Select "New Application" at top right, name it UGC-Gaming or something of your choice, and select create
+3: Select the Bot tab and select "Add Bot". From here you can set bot picture, and name. 
+4: Under the Bot tab, use the toggles to enable "PRESENCE INTENT", "SERVER MEMBERS INTENT", and "MESSAGE CONTENT INTENT" and save changed.
+5: Save the bot token for later.
+6: Select OAuth2 tab, and General subtab
+7: Here, add a redirect link (I'd use https://ugc-gaming.net/), and save changes
+8: Select OAuth2 tab, and URL Generator
+9: Select identify, bot, and applications.commands checkboxes
+10: Set redirect URL to the ugc link you just gave it eariler, add any permissions necessary in the tab under it
+11: Copy the link it gives at bottom into discord, paste it into a browser, and use it to add the bot back into the ugc server

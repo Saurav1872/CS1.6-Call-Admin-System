@@ -1,0 +1,14 @@
+Discord bot:
+	1) Go to 'https://discord.com/developers/applications' and log in.
+	2) Click on 'New Application' which you can see in the upper right corner and choose the name of the desired application and create it.
+	3) Once you are in your application area, click on the 'Bot' button which you can see in the left corner in the center.
+	4) Click on 'Add Bot" and then 'Yes, do it!'.
+	5) Copy and save the bot token, we need it for calladmin plugins.
+	6) Once the bot is created, disable the 'Public bot' option (so you can only use it) and enable "REQUIRES OAUTH2 CODE GRANT" and add it to the discord servers.
+	7) Click OAuth2, then click 'Add redirect' and add any website, it is better if you add "https://ugc-gaming.net/index.php". Nothing but unlocking the Outh2 feature. There is nothing related to redirection at all, only that, without redirection, we cannot use other features.
+	8) Copy and save the client's secret for future uses.
+	9) Now in OAuth2, go to the "URL Generator" tab.
+	10) Select the redirect URL we created earlier in the SELECT REDIRECT URL.
+	11) Choose 'bot', 'identify' and 'applications.commands' from the 'scopes' section, and give the bot basic permissions that any normal member can have. ( Send messages, read messages, read messages history, embed links, manage messages, mention everyone, use extral emojies, add reaction, and use slash commands).
+	12) Copy and paste the generated URL into your browser and choose the server on which you want to install the bot.
+	13) Ensure that the bot can send messages to the channel you want to receive CallAdmin reports on.

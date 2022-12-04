@@ -1,0 +1,122 @@
+const Discord = require('discord.js');
+const guildData = require("../util/functions.js");
+module.exports = {
+	name:"updateadmin",
+	aliases: ["changeadmin"], 
+	description:"Update `Report Admin` feild in calladmin report.",
+    access: "moderator",
+	run: async (bot,message,args)=>{
+      //  const target = message.mentions.members.first() || message.guild.members.cache.get(args[1]) || message.member;
+      //  message.reply(target.user.displayAvatarURL({dynamic:true,size:4096}))
+        if(message.reference){
+			let msgid = message.reference.messageId;
+            message.channel.messages.fetch(msgid)
+  				.then (fetchedMsg => {
+                	if(fetchedMsg.author.id !== bot.user.id) return;
+                	if(!fetchedMsg.embeds[0]) return;
+                	let currentEmbed = fetchedMsg.embeds[0];
+                	if(currentEmbed.fields.length < 18) return;
+                	if(currentEmbed.fields.length > 18) return;
+                    if(currentEmbed.fields.length = 18)  {
+                        
+                      	let fields1 = currentEmbed.fields[0];
+                        let fields2 = currentEmbed.fields[1];
+                        let fields3 = currentEmbed.fields[3];
+                        let fields4 = currentEmbed.fields[4];
+                        let fields5 = currentEmbed.fields[6];
+                        let fields6 = currentEmbed.fields[7];
+                        let fields7 = currentEmbed.fields[9];
+                        let fields8 = currentEmbed.fields[10];
+                        let fields9 = currentEmbed.fields[12];
+                        let fields10 = currentEmbed.fields[13];
+                        let fields11 = currentEmbed.fields[15];
+                        let fields12 = currentEmbed.fields[16];
+                        
+                        if(fields1.name !== 'Server Name') return;
+                        if(fields2.name !== 'Server IP') return;
+                        if(fields3.name !== 'Steam Connect') return;
+                        if(fields4.name !== 'Map') return;
+                        if(fields5.name !== 'Dispatcher Name') return;
+                        if(fields6.name !== 'Dispatcher SteamID') return;
+                        if(fields7.name !== 'Suspect Name') return;
+                        if(fields8.name !== 'Suspect SteamID') return;
+                        if(fields9.name !== 'Reason') return;
+                        if(fields10.name !== 'Date & Time') return;
+                        if(fields11.name !== 'Admin') return;
+                        if(fields12.name !== 'Status') return;
+                	
+                        
+                        if(!args){
+                            message.reply(`No Admin Mentioned!`);
+                            return;
+                        }
+                        if(args === ""){
+                            message.reply(`No Admin Mentioned!`);
+                            return;
+                        }
+                        if(args === " "){
+                            message.reply(`No Admin Mentioned!`);
+                            return;
+                        }
+                        let admin = args.join(" ");
+  						if (admin === " " || admin === ""){
+                            message.reply(`No Admin Mentioned!`);
+                            return;
+                        }
+                       // fetchedMsg.edit(admin);
+                        const embednamee = new Discord.MessageEmbed()
+                        embednamee.setColor('0x#73e405')
+                        embednamee.addFields(fields1)
+                        embednamee.addFields(fields2)
+                        embednamee.addField('_ _', '_ _', true)
+                        embednamee.addFields(fields3)
+                        embednamee.addFields(fields4)
+                        embednamee.addField('_ _', '_ _', true)
+                        embednamee.addFields(fields5)
+                        embednamee.addFields(fields6)
+                        embednamee.addField('_ _', '_ _', true)
+                        embednamee.addFields(fields7)
+                        embednamee.addFields(fields8)
+                        embednamee.addField('_ _', '_ _', true)
+                        embednamee.addFields(fields9)
+                        embednamee.addFields(fields10)
+                        embednamee.addField('_ _', '_ _', true)
+                        embednamee.addField(`${fields11.name}`, `${admin}`, true)
+                        embednamee.addFields(fields12)
+                        embednamee.addField('_ _', '_ _', true);
+                        embednamee.setImage(currentEmbed.image.url)
+                        
+                        guildData.is_administrator(message.guildId, message.member.roles)
+                        .then((status) => {
+            				if(!status) {
+                                guildData.is_moderator(message.guildId, message.member.roles)
+                                .then((status2) => {
+                                    if(status2) {
+                                        fetchedMsg.edit({content: `${fetchedMsg.content}`, embeds: [embednamee]});
+                        				fetchedMsg.reply('Done!');
+                                        return;
+                                    }
+                                    else {
+                                        guildData.is_admin(message.guildId, message.member.roles)
+                                            .then((status3) => {
+                                                if(status3) {
+                                                    return message.reply({content: "Only moderators can access this command."});
+                                                }
+                                            	else return;
+                                            })
+                                 	}
+                                })
+                            }
+                            else {
+                                fetchedMsg.edit({content: `${fetchedMsg.content}`, embeds: [embednamee]});
+                        		fetchedMsg.reply('Done!');
+                                return;
+                            }
+                        }); 
+                 	}
+           		});
+                
+       		
+     	}
+	}
+}

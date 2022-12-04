@@ -1,0 +1,138 @@
+Commands Info:
+Generic Commands:
+1.	help - Shows a list of commands available to use
+	
+		Use `>help` to get the commands list.
+		Use `>help <command name>` to get info of specifc command.
+		
+		Aliases: `h`
+		
+
+2.  ping - Shows Bot Api and Message Latency
+
+	use `>ping` to get the bot ping
+	
+	Aliases: `latency`
+	
+
+Admin Commands:
+1. 	close - Closes calladmin report.
+
+		scroll up to the calladmin report you want to close, click more options and then select reply.
+		then use `>close`.
+		A menu will appear to you, select a valid reason and then your report will be closed.
+		
+		Make sure your using `>close` command in reply mode to the report.
+		
+		Aliases: `end`, `c`
+	
+Moderator Commands:
+1. 	changestatus - Updates the calladmin report status.
+
+		scroll up to the calladmin report you want to close, click more options and then select reply.
+		then use `>changestatus`.
+		A menu will appear to you, select a valid reason and then your report status will be updated.
+		
+		
+		Aliases: `updatestatus`
+		
+2. 	open - Opens the calladmin report.
+		
+		scroll up to the calladmin report you want to close, click more options and then select reply.
+		then use `>open` to open the report.
+		
+		Note: This will only remove the admin and report status. Normal Admins may not close the report if it has been closed earlier. To acheive this, better use `>resetreport`.
+		
+		
+		Aliases: `o`, `reopen`
+		
+3. 	resetreport - Resets the calladmin report.
+		
+		scroll up to the calladmin report you want to close, click more options and then select reply.
+		then use `>resetreport` to reset the report.
+		
+		Note: This will resets the report completely, making it like original report. Normal admins can thereafter close this report.
+		
+		
+		Aliases: `reset`
+		
+4. 	updateadmin - Updates the admin name[`Report Admin` feild] in calladmin report.
+		
+		scroll up to the calladmin report you want to close, click more options and then select reply.
+		then use `>updateadmin <admin-name>` to reset the report.
+		
+		Aliases: `changeadmin`
+		
+Administrator Commands:
+1. 	add - Adds roles for different positions.
+
+		Positions available:
+			=> Admin
+			=> Moderator
+			=> Administrator
+		
+		To add a role for a position, turn on developer mode for your discord account. Right click on the role and select copy ID.
+		use `>add <position> <roleid>` to add this for the respective position.
+		
+		Aliases: `a`
+		
+2. 	remove - Removes roles for different positions.
+
+		Positions available:
+			=> Admin
+			=> Moderator
+			=> Administrator
+		
+		To remove a role from a position, turn on developer mode for your discord account. Right click on the role and select copy ID.
+		use `>remove <position> <roleid>` to remove this from the respective position.
+		
+		Aliases: `r`
+		
+3. 	get - Gets roles added for different positions.
+
+		Positions available:
+			=> Admin
+			=> Moderator
+			=> Administrator
+		
+		To get list of roles added for a position,
+		use `>get <position>`.
+		
+		Aliases: `g`
+		
+4. fakereport - Creates a fake calladmin report.
+		
+		use `>fakereport` to create a fake calladmin report.
+		
+		Note: this command is basically for debug purposes. If the bot suddenly stops working, then use this command to create a fake report. Then use your calladmin specific commandon this report to check if its bot side or server side issue.
+		
+		
+		Aliases: `fr`
+		
+5. setup - Setups the bot for the guild if its not been set.
+
+		use `>setup` to setup the bot for the guild.
+		
+		Note: Its setups the guild info (prefix, admins/mod/administrator position roles) in bot data file.
+		Note: This command only works if the data isnt in the server.
+		
+		Aliases: `s`
+		
+6. prefix - Sets the bot prefix for the server.
+
+		use `>prefix` to get server prefix.
+		use `>prefix <prefix>` to set server prefix.
+		
+		Note: You may mention the bot to get server prefix. This method can be used by all having access to use bot.
+		
+		Aliases: `serverprefix`, `p`
+	
+7. uptime - gets the bot uptime duration.
+
+		use `>uptime` to get uptime duration of the bot.
+		
+		Note: It basically tells when the bot was restarted last time.
+		Note: It is very useful to trace BOT unexpected crash.
+		
+		Aliases: `botuptime`
+		

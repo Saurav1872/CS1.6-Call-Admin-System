@@ -1,0 +1,46 @@
+[en]
+CALLADMIN_PREFIX = ^1[^4CallAdmin^1]
+
+CALLADMIN_ANNOUNCE = To report a player to our staff on discord, write in the chat ^4/calladmin^1.
+
+CALLADMIN_RECENTLY_MADE = You recently sent a report. You can send another report after ^3%s.
+CALLADMIN_WARN_ONE = ^3WARNING! ^1Fake reports may result in punishment, please use the CallAdmin system wisely!
+CALLADMIN_WARN_TWO = ^3WARNING! ^1Use CallAdmin wisely and at your own risk.
+CALLADMIN_NO_PLAYER = There are no players to report.
+
+CALLADMIN_MENU = \w CallAdmin: \r[\ySelect a player\r]
+CALLADMIN_SELECT_REASON = \ySelect Reason
+CALLADMIN_CUSTOM_REASON = \yCustom Reason
+CALLADMIN_SPECIFY_REASON = Please specify the reason very briefly.
+
+CALLADMIN_CONFIRM_MENU = \yCallAdmin \r[\wConfirmation\r]^n^n\r>>\yReporting: \w%s^n\r>>\yReason: \w%s
+CALLADMIN_EDIT_INFO = \yEdit Info
+CALLADMIN_YES = \rYes
+CALLADMIN_NO = \rNo
+CALLADMIN_CONFIRM_MENU_WARNING = \y[\rWarning\y]^n\yFake reports may result in punishment.^nMake call with responsibilities.
+CALLADMIN_FAILED_TO_FIND_USER = Sorry, the mentioned player could not be found. Please repeat the steps.
+
+CALLADMIN_FAILED_TO_SEND = CallAdmin Report Failed. Try again later, or report using the forums.
+CALLADMIN_REPORT_SENT = Your report has been sent successfully.
+CALLADMIN_REPORT_MADED = A new CallAdmin report has been sent from this server. Check ^3/reports^1.
+
+CALLADMIN_REPORTS_MENU_TITLE = \yReports Pending \w[\rReporters\w]
+CALLADMIN_REPORTING = Reporting
+CALLADMIN_REPORTS_NONE = There are no pending reports.
+CALLADMIN_REPORTS_MENU_2 = \rCallAdmin Reports^n\w[\rReporter:\w %s]^n[\rReportng:\w %s]
+CALLADMIN_REPORTS_MENU_INFO = \rCallAdmin Reports^nReport Info:
+CALLADMIN_REPORTS_INFO_REPORTER = \yReporter:\w %s
+CALLADMIN_REPORTS_INFO_R_STEAMID = \yReporter SteamID:\w %s
+CALLADMIN_REPORTS_INFO_SUSPECT = \ySuspect:\w %s
+CALLADMIN_REPORTS_INFO_S_STEAMID = \ySuspect SteamID:\w %s
+CALLADMIN_REPORTS_INFO_REASON = \yReason:\w %s
+CALLADMIN_REPORTS_INFO_CLOSE = Close Report
+CALLADMIN_REPORTS_INFO_STATUS = \yStatus:\w %s
+CALLADMIN_REPORTS_STATUS = \yReport Status
+CALLADMIN_REPORTS_CONFIRM_TITLE = \rClose this report?
+CALLADMIN_REPORTS_INFO_CLOSE_YES = \rYes, close this report
+CALLADMIN_REPORTS_CLOSED_SUCCESFULLY = Report closed successfully.
+CALLADMIN_REPORTS_CLOSED_INFORM = Your report has been closed by ^4Admin^1 '^3%s^1' [^3Status: %s^1].
+
+
+CALLADMIN_REPORTS_MISSING = The report is no longer available.

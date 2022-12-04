@@ -1,0 +1,39 @@
+Bot Working Explained:
+1. On bot start, commands, interactions and events are registered trough util/handlers function.
+2. When a specific event is triggers, it performs the action related to it.
+	
+	messageCreate event deals with messages sent in the server.
+	If message got prefix , it will check if user has administrator permissions or if the user roles matches with any one of the guild admin/mod/administrator role array.
+	If true, it will execute the commands.
+	
+	
+	Interaction Create will be trigger is a menu / slash commands interactions is made. In that case, the interaction code corresponding to the interaction will be executed.
+	
+	Guild create will trigger the resgistering the server data in the bot ( same as >setup command).
+	
+	ready performs actions required to be done on bot start (setting status etc)
+	
+3. Commands got different sections:
+	name is basically command name
+	aliases are aliases for that command.
+	description sets the command description for >help command.
+	access commands is just for >help command. The true check/actions are done with manual methods
+	Run is what is being executed when the commands is executed.
+	
+	
+4. Interaction got different sections:
+	name is the interactionId name
+	Run is what is being executed when the interaction is triggered.
+
+5. Event also got different sections:
+	name is event name.
+	Run is what is being executedwhen the event is triggered.
+	
+6. Slash commands got different sections:
+	name is the slash command name.
+	description is the slash command description.
+	options is the command component for the slash command
+	run is what is being executed for slash command.
+	
+7. Commands got alot function created for getting/updating/registering data in data file for different objectives ( getting prefix, adding role in any array etc)
+

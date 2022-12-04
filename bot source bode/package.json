@@ -1,0 +1,20 @@
+{
+  "name": "CallAdmin Bot",
+  "version": "2.7.3",
+  "description": "CallAdmin Bot Discord",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node ./src/index.js"
+  },
+  "keywords": [
+    "discordjsbot",
+    "calladminbot"
+  ],
+  "author": "NIGHT HOWLER",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.0.1",
+    "dotenv": "^10.0.0",
+    "ms": "^2.1.3"
+  }
+}
